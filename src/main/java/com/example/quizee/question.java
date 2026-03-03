@@ -1,7 +1,5 @@
 package com.example.quizee;
 
-
-
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -10,15 +8,20 @@ import lombok.Data;
 
 @Entity
 @Data
-public class question {
+public class Question{
     @Id
-    @GeneratedValue(strategy= GenerationType.SEQUENCE)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
+
     private String questionTitle;
     private String option1;
     private String option2;
     private String option3;
     private String option4;
     private String rightAnswer;
-    private String difficutylevel;
-}
+
+   // @Column(name = "difficulty_level", nullable = false)
+    private String difficultyLevel;
+
+    private String category;
+} 

@@ -1,11 +1,13 @@
 package com.example.quizee.dao;
 
+import java.util.List;
+
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import com.example.quizee.question;
+import com.example.quizee.Question;
 
 @Repository
-public interface  QuestionDao extends JpaRepository<question, Integer> {
-    
-}
+public interface QuestionDao extends JpaRepository<Question, Integer> {
+    List<Question> findByCategory(String category);
+} 

@@ -5,8 +5,8 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.example.quizee.Question;
 import com.example.quizee.dao.QuestionDao;
-import com.example.quizee.question;
 
 
 @Service
@@ -15,8 +15,17 @@ public class QuestionService {
     @Autowired
     QuestionDao questionDao;
 
-    public List<question> getAllQuestions(){
+    public List<Question> getAllQuestions(){
         return questionDao.findAll();
     }
 
-}
+    public List<Question> getQuestionsByCategory(String category){
+        return questionDao.findByCategory(category);
+    }
+
+    public String addQuestion(Question q){
+        questionDao.save(q);
+        return "Question added successfully";
+    }
+
+} 
