@@ -1,4 +1,4 @@
-package com.example.quizee;
+package com.example.quizee.model;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

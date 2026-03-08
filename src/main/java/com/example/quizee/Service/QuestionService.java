@@ -5,8 +5,8 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.example.quizee.Question;
 import com.example.quizee.dao.QuestionDao;
+import com.example.quizee.model.Question;
 
 
 @Service
